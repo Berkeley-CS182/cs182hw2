@@ -115,6 +115,7 @@ class Solver(object):
 
         self.print_every = kwargs.pop('print_every', 10)
         self.verbose = kwargs.pop('verbose', True)
+        self.log_acc_iteration = kwargs.pop('log_acc_iteration', False)
 
         # Throw an error if there are extra keyword arguments
         if len(kwargs) > 0:
@@ -141,6 +142,8 @@ class Solver(object):
         self.loss_history = []
         self.train_acc_history = []
         self.val_acc_history = []
+        self.log_acc_iteration_history = []
+        self.log_grad_norm_history = []
 
         # Make a deep copy of the optim_config for each parameter
         self.optim_configs = {}
@@ -170,6 +173,14 @@ class Solver(object):
             next_w, next_config = self.update_rule(w, dw, config)
             self.model.params[p] = next_w
             self.optim_configs[p] = next_config
+
+        #############################################################################
+        # TODO: Store the mean of l2 norm of each gradient in log_grad_norm_history #
+        #############################################################################
+
+        #############################################################################
+        #                             END OF YOUR CODE                              #
+        #############################################################################
 
     def record_histories_as_npz(self, filename):
         tl_hist = np.array(self.loss_history)
@@ -248,6 +259,8 @@ class Solver(object):
                 train_acc = self.check_accuracy(self.X_train, self.y_train,
                                                 num_samples=1000)
                 val_acc = self.check_accuracy(self.X_val, self.y_val)
+                if self.log_acc_iteration:
+                    self.log_acc_iteration_history.append(t)
                 self.train_acc_history.append(train_acc)
                 self.val_acc_history.append(val_acc)
 
