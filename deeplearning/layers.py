@@ -103,6 +103,7 @@ def relu_backward(dout, cache):
     #############################################################################
     return dx
 
+
 def svm_loss(x, y):
     """
     Computes the loss and gradient using for multiclass SVM classification.

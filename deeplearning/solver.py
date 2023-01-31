@@ -176,8 +176,7 @@ class Solver(object):
         ta_hist = np.array(self.train_acc_history)
         va_hist = np.array(self.val_acc_history)
         np.savez(filename, train_losses=tl_hist, train_accs=ta_hist, val_accs=va_hist)
-        
-            
+
     def check_accuracy(self, X, y, num_samples=None, batch_size=100):
         """
         Check accuracy of the model on the provided data.

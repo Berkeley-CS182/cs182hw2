@@ -1,5 +1,6 @@
 from deeplearning.layers import *
 
+
 def affine_relu_forward(x, w, b):
     """
     Convenience layer that perorms an affine transform followed by a ReLU
@@ -26,9 +27,6 @@ def affine_relu_backward(dout, cache):
     da = relu_backward(dout, relu_cache)
     dx, dw, db = affine_backward(da, fc_cache)
     return dx, dw, db
-
-
-pass
 
 
 def conv_relu_forward(x, w, b, conv_param):
