@@ -95,7 +95,7 @@ def rmsprop(w, dw, config=None):
     next_w = None
     #############################################################################
     # TODO: Implement the RMSprop update formula, storing the next value of x   #
-    # in the next_x variable. Don't forget to update cache value stored in      #
+    # in the next_w variable. Don't forget to update cache value stored in      #
     # config['cache'].                                                          #
     #############################################################################
 
@@ -132,7 +132,7 @@ def adam(w, dw, config=None):
     next_w = None
     #############################################################################
     # TODO: Implement the Adam update formula, storing the next value of x in   #
-    # the next_x variable. Don't forget to update the m, v, and t variables     #
+    # the next_w variable. Don't forget to update the m, v, and t variables     #
     # stored in config.                                                         #
     #############################################################################
 
