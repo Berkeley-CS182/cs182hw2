@@ -1,5 +1,7 @@
 import numpy as np
 
+from deeplearning.layer_utils import *
+
 
 class TwoLayerNet(object):
     """
