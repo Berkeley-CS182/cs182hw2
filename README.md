@@ -1,11 +1,3 @@
-In this assignment you will practice writing backpropagation code and training
-Neural Networks. The goals of this assignment
-are as follows:
-
-- understand **Neural Networks** and how they are arranged in layered
-  architectures
-- understand and be able to implement (vectorized) **backpropagation**
-
 ## Setup
 Make sure your machine is set up with the assignment dependencies.
 
@@ -21,8 +13,8 @@ engineering and data analysis. Once you install it you can skip all mentions of
 requirements and you are ready to go directly to working on the assignment.
 
 ```bash
-conda create -n cs182hw1 python=3.8 jupyter
-conda activate cs182hw1
+conda create -n cs182hw2 python=3.8 jupyter
+conda activate cs182hw2
 python -m pip install numpy==1.21.6 imageio==2.9.0 matplotlib==3.2.2
 ```
 
@@ -50,12 +42,4 @@ from this directory.
 jupyter notebook
 ```
 
-### Fully-connected Neural Network
-The IPython notebook `FullyConnectedNets.ipynb` will introduce you to our
-modular layer design, and then use those layers to implement fully-connected
-networks of arbitrary depth. To optimize these models you will implement several
-popular update rules.
-
-If you use Colab for this notebook, make sure to manually download the completed
-notebook and place it in the assignment directory before submitting. Also remember
-to download required output file and place it into submission_logs/ directory.
+Once you get started, you can open the Jupyter Notebook `hw2_optimizer_init.ipynb` for further instructions.
