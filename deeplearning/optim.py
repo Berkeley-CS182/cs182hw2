@@ -141,3 +141,12 @@ def adam(w, dw, config=None):
     #############################################################################
 
     return next_w, config
+
+
+
+#############################################################################
+# Solution for RMSProp:
+#############################################################################
+# cache = config['decay_rate'] * config['cache'] + (1 - config['decay_rate']) * (dw ** 2)
+# next_w = w - config['learning_rate'] * dw / (np.sqrt(cache) + config['epsilon'])
+# config['cache'] = cache
